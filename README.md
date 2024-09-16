@@ -29,8 +29,6 @@ This Personal Information Manager is a web application designed to collect and m
 - Node.js and npm
 - Axois
     - This will be used to communicate with the backend.
-- Bulma
-    - This is the CSS framework I used to make it easier to create a nice interface
 
 ### Backend Setup
 
@@ -52,14 +50,14 @@ This Personal Information Manager is a web application designed to collect and m
 3. **Create the Django Project**
     
     ```bash
-     django-admin startproject vueango
+     django-admin startproject myproj
     ```
     
 4. **Create a superuser for the admin interface**
     
     ```bash
-    cd vueango
-    python mnage.py createsuperuser
+    cd myproj
+    python manage.py createsuperuser
     ```
     
 5. **Run database migrations:**
@@ -80,7 +78,7 @@ This Personal Information Manager is a web application designed to collect and m
 1. **Navigate to the frontend directory:**
     
     ```bash
-    cd Vue
+    cd frontend
     ```
     
 2. **Install frontend dependencies:**
@@ -88,13 +86,12 @@ This Personal Information Manager is a web application designed to collect and m
     ```bash
     npm install
     npm install axios
-    npm install bulma
     ```
     
 3. **Create the Vue Project**
     
     ```bash
-    vue create vueango
+    vue create frontend
     ```
     
 4. **Compile and hot-reload for development:**
@@ -111,47 +108,24 @@ This Personal Information Manager is a web application designed to collect and m
 - **View Entries**: Users can view all the surnames that have been entered.
 - **Edit Functionality**: Users can only edit the information of the most recently added entry that they have submitted.
 
-## Project Structure
-
-```ruby
-project-root/
-├── backend/
-│   ├── manage.py
-│   ├── <app_name>/
-│   │   ├── migrations/
-│   │   ├── models.py
-│   │   ├── serializers.py
-│   │   ├── views.py
-│   └── ...
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── views/
-│   │   └── App.vue
-│   └── ...
-└── README.md
-
-```
-
 ## API Endpoints
 
 ### Get All Entries
 
-- **Endpoint**: `/members/`
+- **Endpoint**: `/persons/`
 - **Method**: GET
 - **Description**: Retrieve a list of all entries, including name, surname, contact number, age, and gender.
-    - The application will display all information at the local server URL: [http://127.0.0.1:8000/members/](http://127.0.0.1:8000/members/), which allows for API access. In contrast, the front-end application will present only the surnames at [http://localhost:8080/](http://localhost:8080/).
+    - The application will display all information at the local server URL: [http://127.0.0.1:8000/persons/](http://127.0.0.1:8000/members/), which allows for API access. In contrast, the front-end application will present only the surnames at [http://localhost:8080/](http://localhost:8080/).
 
 ### Add New Entry
 
-- **Endpoint**: `/members/`
+- **Endpoint**: `/persons/`
 - **Method**: POST
 - **Description**: Add a new entry to the database with fields for name, surname, contact number, age, and gender.
 
 ### Edit The Entries
 
-- **Endpoint**: `/members/{member_id}/`
+- **Endpoint**: `/persons/{persons_id}/`
 - **Method**: PUT
 - **Description**: Edit the entry in the database.
 
@@ -160,11 +134,3 @@ project-root/
 - **Form Component**: A Vue.js component that handles user input and form submission.
 - **Entry List Component**: Displays all surname entries, highlighting the most recent entry.
 - **Edit Form Component**: Allows users to edit the latest entry that they have submitted.
-
-## Deployment
-
-Instructions for deploying the application will be provided based on the chosen hosting environment.
-
-## Contact
-
-For any inquiries, please contact me, Delara Jalali, at delara.jalali.382@gmail.com.
