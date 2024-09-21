@@ -1,4 +1,5 @@
 # Project Documentation
+![alt text](https://github.com/saeedvft/vue-django-app/blob/master/Screenshots/2.jpg?raw=true)
 
 ## Project Overview
 
