@@ -129,6 +129,8 @@ This Personal Information Manager is a web application designed to collect and m
 - **Endpoint**: `/persons/{persons_id}/`
 - **Method**: PUT
 - **Description**: Edit the entry in the database.
+- 
+![alt text](https://github.com/saeedvft/vue-django-app/blob/master/Screenshots/1.jpg?raw=true)
 
 ## Frontend Components
 
